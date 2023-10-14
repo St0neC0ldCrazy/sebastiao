@@ -8,5 +8,5 @@ function botaoHamburguer() {
     menuTopo.classList.toggle('active');
 
     const isActive = menuTopo.classList.contains('active');
-    botaoMenuImagem.src = isActive ? '../TPC_13/images/desktop/menu-burger/fechar.svg' : '../TPC_13/images/desktop/menu-burger/menu.svg';
+    botaoMenuImagem.src = isActive ? 'images/desktop/menu-burger/fechar.svg' : 'images/desktop/menu-burger/menu.svg';
 }
