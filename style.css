@@ -172,12 +172,12 @@ body{
     width: 120px;
     height: 30px;
     border: none;
-    background-image: url('../TPC_13/images/desktop/botao-saber-mais/sabermais1.svg');
+    background-image: url('images/desktop/botao-saber-mais/sabermais1.svg');
     background-size: cover;
 }
 
 .botao-sabermais-banner:hover {
-    background-image: url('../TPC_13/images/desktop/botao-saber-mais/sabermais2.svg');
+    background-image: url('images/desktop/botao-saber-mais/sabermais2.svg');
 }
 
 /*BANNER CARROSSEL - INDICADORES*/
@@ -196,11 +196,11 @@ body{
     position: relative;
     margin-right: 16px;
     background-color: rgba(255, 255, 255, 0);
-    background-image: url('../TPC_13/images/desktop/banner-header/bolabanner1.svg');
+    background-image: url('images/desktop/banner-header/bolabanner1.svg');
 }
 
 .carousel-indicators [data-bs-target].custom-indicator.active{
-    background-image: url('../TPC_13/images/desktop/banner-header/bolabanner2.svg');
+    background-image: url('images/desktop/banner-header/bolabanner2.svg');
 }
 
 #caixa-topo{
@@ -420,30 +420,30 @@ footer{
 }
 
 .botao-insta{
-    background-image: url('../TPC_13/images/desktop/icones-footer/instagram1.svg');
+    background-image: url('images/desktop/icones-footer/instagram1.svg');
     background-size: cover;
 }
 
 .botao-insta:hover {
-    background-image: url('../TPC_13/images/desktop/icones-footer/instagram2.svg');
+    background-image: url('images/desktop/icones-footer/instagram2.svg');
 }
 
 .botao-fb{
-    background-image: url('../TPC_13/images/desktop/icones-footer/facebook1.svg');
+    background-image: url('images/desktop/icones-footer/facebook1.svg');
     background-size: cover;
 }
 
 .botao-fb:hover {
-    background-image: url('../TPC_13/images/desktop/icones-footer/facebook2.svg');
+    background-image: url('images/desktop/icones-footer/facebook2.svg');
 }
 
 .botao-link{
-    background-image: url('../TPC_13/images/desktop/icones-footer/linkedin1.svg');
+    background-image: url('images/desktop/icones-footer/linkedin1.svg');
     background-size: cover;
 }
 
 .botao-link:hover {
-    background-image: url('../TPC_13/images/desktop/icones-footer/linkedin2.svg');
+    background-image: url('images/desktop/icones-footer/linkedin2.svg');
 }
 
 a{
