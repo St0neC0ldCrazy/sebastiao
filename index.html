@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastião Alves</title>
+    <!-- Boostrap 5.3.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- jquery + popper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Letras Projecto -->
+    <link rel="stylesheet" href="../TPC_13/fonts/ibm/stylesheet.css">
+    <link rel="stylesheet" href="../TPC_13/fonts/lato/stylesheet.css">
+    <!-- Javascript -->
+    <script src="functions.js"></script>
+</head>
+<body>
+    <header class="container-fluid">
+        <!-- Título Site + Barra de Navegação Header -->
+        <div id="topo" class="row">
+            <div class="titulo col-12 d-flex justify-content-around justify-content-md-center">
+                <div class="row">Sebastião Alves</div>
+                <div class="row">
+                    <!-- BOTÃO MENU HAMBURGUER MOBILE -->
+                    <button class="navbar-toggler d-md-none collapsed" onclick="botaoHamburguer()" type="button" data-toggle="collapse" data-target="#navbar-topo" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <img id="botao-menu-imagem" src="../TPC_13/images/desktop/menu-burger/menu.svg" alt="Botão Menu" style="width: 35px; height: 29px;">
+                    </button>
+                </div>
+            </div>
+            <div class="linha-titulo col-auto mx-auto"></div>
+            <!-- Barra de Navegação Header -->
+            <nav id="menu-topo" class="col-12 navbar navbar-expand-md">
+                <div class="navbar-collapse d-block-md collapse" id="navbar-topo">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mr-md-3">
+                            <a id="home-link" class="nav-link menus active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mr-md-3">
+                            <a class="nav-link menus" href="#">Autor</a>
+                        </li>
+                        <li class="nav-item mr-md-3 dropdown">
+                            <a class="nav-link menus" href="#" id="menu-livros" data-bs-toggle="dropdown" aria-expanded="false">
+                                Livros
+                            </a>
+                            <!-- (automatizar!) -->
+                            <div id="submenu-livros" class="dropdown-menu" aria-labelledby="menu-livros">
+                                <a class="dropdown-item submenus" href="#">Senhora do Amor e da Guerra</a>
+                                <a class="dropdown-item submenus" href="#">O Caracol Estrábico</a>
+                                <a class="dropdown-item submenus" href="#">O Colecionador de Amnésias</a>
+                                <a class="dropdown-item submenus" href="#">O Velho que Pensava que Fugia</a>
+                            </div>
+                        </li>
+                        <li class="nav-item mr-md-3">
+                            <a class="nav-link menus" href="#">Imprensa</a>
+                        </li>
+                        <li class="nav-item mr-md-3">
+                            <a class="nav-link menus" href="#">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Banner Carrossel Desktop -->
+        <div id="cabecalho" class="row d-none d-md-block">
+            <div id="carousel-desktop" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+                <!-- Indicadores Desktop (automatizar!)-->
+                <div class="carousel-indicators cabecalho-indicadores">
+                    <button type="button" data-bs-target="#carousel-desktop" data-bs-slide-to="0" class="custom-indicator active"></button>
+                    <button type="button" data-bs-target="#carousel-desktop" data-bs-slide-to="1" class="custom-indicator"></button>
+                    <button type="button" data-bs-target="#carousel-desktop" data-bs-slide-to="2" class="custom-indicator"></button>
+                    <button type="button" data-bs-target="#carousel-desktop" data-bs-slide-to="3" class="custom-indicator"></button>
+                </div>
+                <!-- Imagens do Carrossel Desktop (automatizar!) -->
+                <div class="carousel-inner">
+                    <!-- Imagem carrosel desktop 1 -->
+                    <div class="carousel-item active">
+                        <img src="../TPC_13/images/desktop/banner-header/cabecalho1.jpg" class="d-block img-fluid" alt="Livro 1">
+                        <div class="carousel-caption d-none d-md-block cabecalho-legendas">
+                            <div class="banner-novidade">Novidade</div>
+                            <div class="banner-titulo">Senhora do Amor e da Guerra</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, eveniet doloribus quod, nisi similique adipisci dolore hic ducimus, unde tempora maxime vitae! Iste quod repellat consequatur consequuntur deleniti quasi officiis nobis accusantium ea totam, corporis maxime ipsa voluptas magni obcaecati.
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                    <!-- Imagem carrosel desktop 2 -->
+                    <div class="carousel-item">
+                        <img src="../TPC_13/images/desktop/banner-header/cabecalho2.jpg" class="d-block img-fluid" alt="Livro 2">
+                        <div class="carousel-caption d-none d-md-block cabecalho-legendas">
+                            <div class="banner-novidade"></div>
+                            <div class="banner-titulo">O Caracol Estrábico</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempore quas illo exercitationem velit quisquam esse quae, quo maxime iusto incidunt ex expedita. Cupiditate aperiam ducimus aliquid deleniti sit molestiae.
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                    <!-- Imagem carrosel desktop 3 -->
+                    <div class="carousel-item">
+                        <img src="../TPC_13/images/desktop/banner-header/cabecalho3.jpg" class="d-block img-fluid" alt="Livro 2">
+                        <div class="carousel-caption d-none d-md-block cabecalho-legendas">
+                            <div class="banner-novidade"></div>
+                            <div class="banner-titulo">O Coleccionador de Amnésias</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias officia fugiat magni doloremque? Quasi quas eveniet saepe, impedit soluta reiciendis dicta est quibusdam quidem a sint excepturi perspiciatis fugiat?
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                    <!-- Imagem carrosel desktop 4 -->
+                    <div class="carousel-item">
+                        <img src="../TPC_13/images/desktop/banner-header/cabecalho4.jpg" class="d-block img-fluid" alt="Livro 2">
+                        <div class="carousel-caption d-none d-md-block cabecalho-legendas">
+                            <div class="banner-novidade"></div>
+                            <div class="banner-titulo">O Velho que Pensava que Fugia</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi velit odit quis magnam dolore tempora nihil qui ea nulla, distinctio fuga consequatur. Quam et corrupti facere vel sint eius quod?
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Carrossel Mobile -->
+        <div id="cabecalho-mobile" class="row d-block d-md-none">
+            <div id="carousel-mobile" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
+                <div class="carousel-indicators indicadores-mobile">
+                    <button type="button" data-bs-target="#carousel-mobile" data-bs-slide-to="0" class="custom-indicator active"></button>
+                    <button type="button" data-bs-target="#carousel-mobile" data-bs-slide-to="1" class="custom-indicator"></button>
+                    <button type="button" data-bs-target="#carousel-mobile" data-bs-slide-to="2" class="custom-indicator"></button>
+                    <button type="button" data-bs-target="#carousel-mobile" data-bs-slide-to="3" class="custom-indicator"></button>
+                </div>
+                <!-- Imagem carrossel mobile 1 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid" src="../TPC_13/images/mobile/cabecalho1.jpg" alt="Livro 1">
+                        <div class="carousel-caption d-block cabecalho-legendas-mobile">
+                            <div class="banner-novidade">Novidade</div>
+                            <div class="banner-titulo">A Senhora do Amor e da Guerra</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, eveniet doloribus quod, nisi similique adipisci dolore hic ducimus, unde tempora maxime vitae! Iste quod repellat consequatur consequuntur deleniti quasi officiis nobis accusantium ea totam, corporis maxime ipsa voluptas magni obcaecati.
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                    <!-- Imagem carrossel mobile 2 -->
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid" src="../TPC_13/images/mobile/cabecalho2.jpg" alt="Livro 2">
+                        <div class="carousel-caption d-block cabecalho-legendas-mobile">
+                            <div class="banner-novidade-vazio"></div>
+                            <div class="banner-titulo">O Caracol Estrábico</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempore quas illo exercitationem velit quisquam esse quae, quo maxime iusto incidunt ex expedita. Cupiditate aperiam ducimus aliquid deleniti sit molestiae.
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                    <!-- Imagem carrossel mobile 3 -->
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid" src="../TPC_13/images/mobile/cabecalho3.jpg" alt="Livro 2">
+                        <div class="carousel-caption d-block cabecalho-legendas-mobile">
+                            <div class="banner-novidade-vazio"></div>
+                            <div class="banner-titulo">O Coleccionador de Amnésias</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias officia fugiat magni doloremque? Quasi quas eveniet saepe, impedit soluta reiciendis dicta est quibusdam quidem a sint excepturi perspiciatis fugiat?
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                    <!-- Imagem carrossel mobile 4 -->
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid" src="../TPC_13/images/mobile/cabecalho4.jpg" alt="Livro 2">
+                        <div class="carousel-caption d-block cabecalho-legendas-mobile">
+                            <div class="banner-novidade-vazio"></div>
+                            <div class="banner-titulo">O Velho que Pensava que Fugia</div>
+                            <div class="banner-texto">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi velit odit quis magnam dolore tempora nihil qui ea nulla, distinctio fuga consequatur. Quam et corrupti facere vel sint eius quod?
+                            </div>
+                            <button class="botao-sabermais-banner"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main id="conteudo">
+        <!-- 1ª BOX BEM VINDO AO SITE  -->
+        <div class="container-fluid">
+            <div id="caixa-topo" class="row offset-md-1">
+                <div id="bemvindo-caixa-imagem" class="col-auto text-center">
+                    <img id="bemvindo-imagem" src="../TPC_13/images/desktop/bem-vindo-main/FOTO-editada.jpg" alt="Imagem Bem-vindo">
+                </div>
+                <div id="bemvindo-conteudo" class="col-10 col-md pr-md-5">
+                    <div id="bemvindo-titulo" class="t1">Bem-vindo ao Meu Website</div>
+                    <div id="bemvindo-texto" class="p pr-md-5">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corrupti quidem! Molestiae nobis explicabo obcaecati mollitia dolor iste, illum dolore ullam ea harum, saepe voluptas adipisci delectus nisi voluptate. Tenetur quidem autem nulla enim adipisci accusantium quam aut, architecto quae, blanditiis a, dolorem qui dicta. Quaerat fuga id porro repudiandae voluptatum distinctio consectetur atque repellendus iste ex quis, molestias ratione labore voluptatem saepe perferendis nisi doloribus debitis officiis ad ipsum. Enim iure fugit voluptate saepe laboriosam? Quos est delectus impedit quia corporis atque ipsum. Ducimus quis autem numquam maiores perferendis recusandae laudantium mollitia eum quisquam hic exercitationem voluptas animi labore neque ratione sed, quia dolor eius iste adipisci laboriosam id accusantium eaque! Assumenda alias officia nesciunt aspernatur!
+                        </p>
+                    </div>
+                    <div class="botao-sabermais-bemvindo-1 mb-5 d-flex justify-content-center justify-content-md-end">
+                        <button class="botao-sabermais-bemvindo-2 botao-sabermais-banner"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2ª BOX ULTIMOS LIVROS + DESTAQUES DE LIVROS -->
+        <div class="container livros-mainbox">
+            <!-- ULTIMOS LIVROS TITULO + TEXTO -->
+            <div id="ultimos-livros" class="row">
+                <div class="col-10 col-md">
+                    <div class="t1">Últimos Livros</div>
+                    <div class="p ultimos-livros-texto">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla numquam deleniti aspernatur facilis reiciendis dolorum ea libero possimus velit laborum nemo voluptatibus, dolores est nisi corrupti iure officiis itaque soluta suscipit rem autem quo deserunt ducimus dicta. Fugiat dignissimos quibusdam aliquam eius deserunt deleniti tenetur voluptate iure, vero quam repellat laborum laboriosam sit eveniet dolorem repudiandae incidunt hic ipsam unde quaerat dolor et. Eius, id quod explicabo blanditiis eligendi exercitationem impedit qui at alias voluptatibus accusantium, mollitia nam ullam sequi sapiente omnis nulla ipsum? Qui corrupti minus illo culpa atque dignissimos est earum rem libero dolore, beatae recusandae a laudantium accusamus corporis sed, ipsam sequi numquam, labore et quaerat! Sequi ipsum labore rerum consectetur doloribus temporibus tenetur, aperiam a modi?
+                    </div>
+                </div>
+            </div>
+            <!-- DESTAQUES DE LIVROS (automatizar!) -->
+            <div id="caixa-destaques-livros" class="row">
+                <!-- destaque 1 -->
+                <div class="destaques-livro pb-4">
+                    <img class="destaques-capa-livro" src="../TPC_13/images/desktop/destaques-livros/livro1.jpg" alt="">
+                    <div class="destaques-livro-conteudo">
+                        <div class="destaques-titulo destaques-titulo-margem">
+                            A Senhora do Amor e da Guerra
+                        </div>
+                        <div class="destaques-tags destaques-tags-margem">
+                            Novidade
+                        </div>
+                        <div class="destaques-texto destaques-texto-margem p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nam ut velit adipisci dolores dolore eius commodi repudiandae ea quos facilis obcaecati assumenda natus fuga, quas fugit voluptatibus iusto maxime!
+                        </div>
+                        <button class="botao-sabermais-banner botao-destaques"></button>
+                    </div>
+                </div>
+                <!-- destaque 2 -->
+                <div class="destaques-livro pb-4">
+                    <img class="destaques-capa-livro" src="../TPC_13/images/desktop/destaques-livros/livro2.jpg" alt="">
+                    <div class="destaques-livro-conteudo">
+                        <div class="destaques-titulo destaques-titulo-margem">
+                            O Velho que Pensava que Fugia
+                        </div>
+                        <div class="destaques-tags destaques-tags-margem">
+                            Mais Vendido
+                        </div>
+                        <div class="destaques-texto destaques-texto-margem p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nam ut velit adipisci dolores dolore eius commodi repudiandae ea quos facilis obcaecati assumenda natus fuga, quas fugit voluptatibus iusto maxime!
+                        </div>
+                        <button class="botao-sabermais-banner botao-destaques"></button>
+                    </div>
+                </div>
+                <!-- destaque 3 -->
+                <div class="destaques-livro pb-4">
+                    <img class="destaques-capa-livro" src="../TPC_13/images/desktop/destaques-livros/livro3.jpg" alt="">
+                    <div class="destaques-livro-conteudo">
+                        <div class="destaques-titulo destaques-titulo-margem">
+                            O Coleccionador de Amnésias
+                        </div>
+                        <div class="destaques-tags destaques-tags-margem">
+                            Em Promoção
+                        </div>
+                        <div class="destaques-texto destaques-texto-margem p">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores officiis eligendi necessitatibus repellat perspiciatis ipsam molestias magnam sit dolorem, eaque officia at voluptatum illum quibusdam eius delectus in reprehenderit non.
+                        </div>
+                        <button class="botao-sabermais-banner botao-destaques"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BARRA DE NAVEGAÇÃO FOOTER (main) -->
+        <div class="navegacao-bottom container-fluid d-none d-md-flex" id="menu-rodape">
+            <div class="menu-rodape-linha"></div>
+            <div class="menu-rodape-itens">
+                <a class="menus-barra-rodape active" href="#">Home</a>
+                <a class="menus-barra-rodape " href="#">Autor</a>
+                <a class="menus-barra-rodape " href="#">Livros</a>
+                <a class="menus-barra-rodape " href="#">Imprensa</a>
+                <a class="menus-barra-rodape " href="#">Contactos</a>
+            </div>
+            <div class="menu-rodape-linha"></div>
+        </div>
+    </main>    
+    <!-- RODAPÉ -->
+    <footer class="container">
+        <div class="row">
+            <div class="col-10 d-block d-md-none rodape-linha-mobile mx-auto"></div>
+        </div>
+        <div class="row">
+            <!-- CONTACTOS -->
+            <div id="contactos-footer" class="col-10 col-md-7 mx-auto">
+                <div class="row destaques-titulo">
+                    <div class="col-12 text-md-left text-center">
+                        Contactos
+                    </div>
+                </div>
+                <div class="row contactos-margem">
+                    <div class="col-12 col-md-4 text-md-left text-center">
+                        <div class="contactos-titulo">Morada</div>
+                        <div class="contactos-conteudo">Lorem ipsum dolor sit amet, 12<br>1234-543 Lorem</div>
+                    </div>
+                    <div class="col-12 col-md-3 text-md-left mt-3 mt-md-0 text-center">
+                        <div class="contactos-titulo">Telefone</div>
+                        <div class="contactos-conteudo">+351 123 456 789</div>
+                    </div>
+                    <div class="col-12 col-md-3 text-md-left mt-3 mt-md-0 text-center">
+                        <div class="contactos-titulo">Email</div>
+                        <div class="contactos-conteudo">lorem@lorem.pt</div>
+                    </div>
+                </div>
+                <!-- icones ralc + livros de reclamacoes visivel apenas em desktop!!! -->
+                <div class="icones-secundarios d-none d-md-block">
+                    <a href="#" target="_blank"><img src="../TPC_13/images/desktop/icones-footer/livroreclamacoes.svg" alt="Livro de Reclamações"></a>
+                    <a href="#" class="icone-ralc-margem"><img src="../TPC_13/images/desktop/icones-footer/ralc.svg" alt="RALC"></a>
+                </div>
+            </div>
+            <!-- REDES SOCIAIS ICONES -->
+            <div id="redes-sociais" class="col-12 col-md-5">
+                <div class="icones-redes col-12 text-center destaques-titulo">Siga-me nas redes sociais</div>
+                <div id="icones-rodape" class="redes d-flex col-12 text-center justify-content-evenly">
+                    <a href="#" class="icone margem-icones botao-insta" target="_blank"></a>
+                    <a href="#" class="icone margem-icones botao-fb" target="_blank"></a>
+                    <a href="#" class="icone margem-icones botao-link" target="_blank"></a>
+                </div>
+                <!-- icones ralc + livro reclamacoes visivel apenas em mobile!!! -->
+                <div class="col-12 d-flex flex-nowrap justify-content-around d-md-none mx-auto" style="margin-top: 50px;">
+                    <a href="../" target="_blank"><img id="livro-mobile" src="../TPC_13/images/desktop/icones-footer/livroreclamacoes.svg" alt="Livro de Reclamações"></a>
+                    <a href="https://sebastiaoalves.com/ralc"><img id="ralc-mobile" src="../TPC_13/images/desktop/icones-footer/ralc.svg" alt="RALC"></a>
+                </div>
+                <!-- POLITICA DE COOKIES -->
+                <div id="copyright" class="text-center p">
+                    <a id="politica-cookies" href="#">Política de Cookies.</a>
+                    <div class="mediamaster">Copyright © 2021 Grupo MediaMaster. <br class="d-md-none">Todos os direitos reservados.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

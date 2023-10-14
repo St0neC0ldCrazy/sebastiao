@@ -1,0 +1,659 @@
+/*CORES PROJECTO*/
+:root{
+    --cinza-1d: #1D1D1D;
+    --cinza-70: #707070;
+    --cinza-4d: #4D4D4D;
+    --dourado-b4: #B47D33;
+    --dourado-b1: #B17E3B;
+    --dourado-a9: #A97339;
+    --branco: #FFFFFF;
+    --preto: #000;
+}
+
+/*ESTILOS GLOBAIS*/
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--branco);
+    max-width: 1280px;
+    margin: auto;
+}
+
+/*TITULO + SUBLINHADO TITULO*/
+#topo{
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    max-width: 1280px;
+}
+
+.titulo{
+    font-family: "IBM_bold";
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+    margin-top: 52px;
+    padding: 0 15px;
+}
+
+.linha-titulo{
+    width: 90%;
+    height: 1px;
+    background-color: var(--cinza-70);
+    margin: 10px 0 15px 0;
+}
+
+/*BARRA NAVEGACAO HEADER*/
+#navbar-topo{
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.navbar{
+    padding: 8px 16px;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 16px;
+}
+
+.menus{
+    font-family: "LATO_black";
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--cinza-4d);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.nav-link.menus:focus {
+    color: var(--cinza-4d);
+}
+
+.menus.active,
+.menus:hover,
+#home-link.active,
+.navbar-nav .nav-link.show:hover {
+    color: var(--dourado-b4);
+}
+
+/*BARRA DE NAVEGACAO HEADER - SUBMENU LIVROS*/
+.submenus{
+    font-family: "IBM_medium";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+    margin-bottom: 5px;
+    text-decoration: none;
+    padding: 4px 24px;
+}
+
+.submenus:hover{
+    color: var(--dourado-b1);
+    text-decoration: none;
+}
+
+.submenus:active{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.submenus.active{
+    color: var(--dourado-b1);
+    background-color: var(--branco);
+    text-decoration: none;
+}
+
+#submenu-livros{
+    padding: 25px 5px 20px 5px;
+    box-shadow: 0 0 10px 0 rgb(175, 175, 175);
+    border-radius: 0;
+    border: none;
+}
+
+/*BANNER CARROSSEL*/
+#carousel-desktop{
+    max-width: 1280px;
+    max-height: 730px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item.img-fluid{
+    width: 100%;
+    height: auto;
+    max-height: 730px;
+}
+
+.cabecalho-legendas{
+    position: absolute;
+    top: 38%;
+    left: 15%;
+    width: 37.5%;
+    padding: 0;
+    text-align: left;
+}
+
+.banner-novidade{
+    height: 20px;
+    margin-bottom: 15px;
+    font-family: "IBM_bold";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--dourado-b4);
+}
+
+.banner-novidade-vazio{
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.banner-titulo{
+    font-family: "IBM_light";
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--cinza-4d);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.banner-texto{
+    font-family: "IBM_light";
+    font-size: 13px;
+    color: var(--cinza-4d);
+}
+
+.botao-sabermais-banner {
+    margin-top: 15px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    background-image: url('../TPC_13/images/desktop/botao-saber-mais/sabermais1.svg');
+    background-size: cover;
+}
+
+.botao-sabermais-banner:hover {
+    background-image: url('../TPC_13/images/desktop/botao-saber-mais/sabermais2.svg');
+}
+
+/*BANNER CARROSSEL - INDICADORES*/
+.cabecalho-indicadores{
+    width: 25%;
+    height: auto;
+    justify-content: left;
+    bottom: 90px;
+}
+
+.carousel-indicators [data-bs-target].custom-indicator{
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-right: 16px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url('../TPC_13/images/desktop/banner-header/bolabanner1.svg');
+}
+
+.carousel-indicators [data-bs-target].custom-indicator.active{
+    background-image: url('../TPC_13/images/desktop/banner-header/bolabanner2.svg');
+}
+
+#caixa-topo{
+    position: relative;
+    margin-top: -45px;
+    background-color: var(--branco);
+    box-shadow: 1px 1px 10px 0 rgb(150, 150, 150);
+}
+
+/*APRESENTACAO ESCRITOR*/
+#bemvindo-imagem{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    max-height: 400px;
+}
+
+#bemvindo-caixa-imagem{
+    padding: 60px 35px 60px 60px;
+}
+
+#bemvindo-titulo{
+    margin-top: 80px;
+}
+
+#bemvindo-texto{
+    margin-top: 30px;
+}
+
+.t1{
+    font-family: "IBM_bold";
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+}
+
+.p{
+    font-family: "IBM_light";
+    font-size: 14px;
+    color: var(--cinza-4d);
+    line-height: 1.5;
+    padding-right: 48px;
+}
+
+#bemvindo-conteudo{
+    padding-right: 48px;
+}
+
+.botao-sabermais-bemvindo-1{
+    margin-top: 30px;
+}
+
+.botao-sabermais-bemvindo-2{
+    margin-right: 48px;
+}
+
+/*DESTAQUES CARDS LIVROS*/
+.livros-mainbox{
+    margin-top: 85px;
+}
+
+.ultimos-livros-texto{
+    margin-top: 23px;
+    padding-right: 0;
+}
+
+#caixa-destaques-livros{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: -70px;
+}
+
+.destaques-livro{
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 4px 4px 8px 0px rgb(210, 210, 210);
+}
+
+.destaques-capa-livro{
+    width: 325px;
+    height: 430px;
+}
+
+.destaques-livro-conteudo{
+    padding: 0 25px;
+}
+
+.destaques-titulo{
+    font-family: "IBM_medium";
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 25px;
+    color: var(--cinza-4d);
+}
+
+.destaques-titulo-margem{
+    margin-top: 30px;
+}
+
+.destaques-tags{
+    font-family: "IBM_medium";
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--dourado-b4);
+}
+
+.destaques-tags-margem{
+    margin-top: 10px;
+}
+
+.destaques-texto{
+    margin-top: 10px;
+    height: 160px;
+}
+
+.destaques-texto-margem{
+    padding-right: 0;
+}
+
+.botao-destaques{
+    float: right;
+}
+
+/*BARRA DE NAVEGAÇÃO FOOTER*/
+#menu-rodape {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacao-bottom {
+    margin-top: 106px;
+}
+
+.menu-rodape-linha {
+    width: 95%;
+    height: 1px;
+    background-color: var(--cinza-70);
+}
+
+.menu-rodape-itens {
+    margin: 27px 0;
+}
+
+.menus-barra-rodape {
+    font-family: "LATO_black";
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.menus-barra-rodape:hover, .menus-barra-rodape.active {
+    color: var(--dourado-b4);
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 50px; 
+    margin-bottom: 70px;
+}
+
+.contactos-margem{
+    margin-top: 20px;
+}
+
+.contactos-titulo{
+    font-family: "IBM_medium";
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--dourado-b4);
+}
+
+.contactos-conteudo{
+    font-family: "IBM_light";
+    font-size: 13px;
+    color: var(--cinza-4d);
+}
+
+#politica-cookies{
+    text-decoration: none;
+    color: var(--cinza-4d);
+}
+
+#politica-cookies:hover{
+    text-decoration: none;
+    color: var(--cinza-4d);
+}
+
+/* FOOTER ICONES REDES SOCIAIS */
+.icones-secundarios{
+    margin-top: 60px;
+}
+
+.icone-ralc-margem{
+    margin-left: 35px;
+}
+
+.icone{
+    width: 37px;
+    height: 37px;
+}
+
+.icones-redes{
+    padding-right: 48px;
+}
+
+.botao-insta{
+    background-image: url('../TPC_13/images/desktop/icones-footer/instagram1.svg');
+    background-size: cover;
+}
+
+.botao-insta:hover {
+    background-image: url('../TPC_13/images/desktop/icones-footer/instagram2.svg');
+}
+
+.botao-fb{
+    background-image: url('../TPC_13/images/desktop/icones-footer/facebook1.svg');
+    background-size: cover;
+}
+
+.botao-fb:hover {
+    background-image: url('../TPC_13/images/desktop/icones-footer/facebook2.svg');
+}
+
+.botao-link{
+    background-image: url('../TPC_13/images/desktop/icones-footer/linkedin1.svg');
+    background-size: cover;
+}
+
+.botao-link:hover {
+    background-image: url('../TPC_13/images/desktop/icones-footer/linkedin2.svg');
+}
+
+a{
+    text-decoration: none;
+}
+
+#copyright {
+    margin-top: 60px;
+}
+
+.redes{
+    margin-top: 30px;
+}
+
+#icones-rodape{
+    padding-right: 125px; 
+    padding-left: 75px;
+}
+
+#contactos-footer{
+    padding-left: 125px;
+}
+
+.mediamaster{
+    font-size: 13px;
+}
+
+/*MEDIA QUERIES DESKTOP*/
+@media only screen and (max-width: 1200px) {
+    .cabecalho-indicadores { bottom: 45px; }
+}
+
+@media only screen and (max-width: 1170px) {
+    .banner-titulo { font-size: 32px; line-height: 35px; }
+    .banner-texto { font-size: 12px; }
+    .cabecalho-indicadores { bottom: 40px; }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cabecalho-indicadores { bottom: 25px; }
+}
+
+@media only screen and (max-width: 965px) {
+    .titulo { margin-top: 0; }
+    .cabecalho-legendas { top: 27.5%; }
+    #bemvindo-texto { padding-right: 10px; }
+}
+
+@media only screen and (max-width: 868px) {
+    .banner-titulo { font-size: 30px; line-height: 32px; }
+    .banner-texto { font-size: 11px; }
+    .banner-novidade { font-size: 11.5px; margin-bottom: 5px; }
+}
+
+@media only screen and (max-width: 900px) {
+    .cabecalho-legendas { top: 23.5%; }
+}
+
+/* DESTAQUES LIVROS */
+@media only screen and (max-width: 1200px) {
+    #caixa-destaques-livros { gap: 30px; }
+}
+
+@media only screen and (max-width: 935px) {
+    #bemvindo-conteudo { padding-right: 10px; }
+}
+
+/* FOOTER */
+@media only screen and (max-width: 991px) {
+    #icones-rodape { padding-right: 35px; padding-left: 5px; }
+}
+
+/* MOBILE */
+#menu-topo {
+    margin-top: -15px;
+    transition-duration: 500ms;
+}
+
+#carousel-mobile{
+    padding: 0;
+    background-color: #d4d4d4;
+}
+
+.cabecalho-legendas-mobile {
+    position: absolute;
+    top: 50%;
+    left: 7.5%;
+    width: 85%;
+    padding: 0px !important;
+    text-align: left;
+}
+
+.indicadores-mobile{
+    width: auto;
+    height: auto;
+    justify-content: left;
+    left: -8%;
+    bottom: 5px;;
+    z-index: 101;
+}
+
+/* MEDIA QUERIES MOBILE <= 767px */
+@media only screen and (max-width: 767px){
+
+    .banner-titulo{
+        font-size: 2rem;
+    }
+
+    .banner-texto{
+        font-size: 0.9rem;
+        line-height: 15px;
+    }
+
+    #bemvindo-caixa-imagem{
+        padding: 0px !important;
+    }
+
+    #bemvindo-titulo{
+        margin-top: 40px;
+    }
+
+    #caixa-topo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0px;
+        padding-top: 48px;
+    }
+
+    .carousel-item .img-fluid{
+        width: auto;
+        height: auto;
+        margin: auto;
+        max-height: 730px;
+        z-index: 100;
+    }
+
+    #copyright{
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    .destaques-livro.meio{
+        margin-top: 70px;
+    }
+
+    #livro-mobile{
+        width: 100px;
+        height: auto;
+    }
+
+    #menu-topo.active{
+        background-color: white;
+        width: 100% !important;
+        padding: 30px 40px;
+        transition-duration: 0.5s;
+    }
+
+    #ralc-mobile{
+        width: 160px;
+        height: auto;
+    }
+
+    .rodape-linha-mobile{
+        height: 1px;
+        margin-top: 35px;
+        margin-bottom: 80px;
+        border-bottom: 1px solid var(--cinza-70);
+    }
+
+    #ultimos-livros{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .titulo{
+        margin-top: 52px;
+    }
+
+    #contactos-footer{
+        padding: 0;
+    }
+
+    .icones-redes {
+        padding: 0;
+    }
+
+    #icones-rodape {
+        padding: 0;
+    }
+
+    #redes-sociais{
+        margin-top: 75px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .titulo{
+        font-size: 24px;
+    }
+
+    .cabecalho-legendas-mobile{
+        top: 45%;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+    #contactos-footer { padding-left: 12px; }
+    #caixa-destaques-livros { gap: 60px;}
+}
+
