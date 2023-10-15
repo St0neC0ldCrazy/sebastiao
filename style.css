@@ -21,7 +21,7 @@
 }
 
 html, body {
-    animation: fadeIn 850ms ease-in;
+    animation: fadeIn 875ms ease-in;
 }
 
 html{
@@ -93,7 +93,11 @@ body{
 
 .menus.active,
 .menus:hover,
-#home-link.active, #autor-link,
+#home-link.active, 
+#autor-link.active, 
+#livros-link.active, 
+#imprensa-link.active,
+#contactos-link.active, 
 .navbar-nav .nav-link.show:hover {
     color: var(--dourado-b4);
 }
@@ -492,7 +496,7 @@ footer{
 /*MEDIA QUERIES DESKTOP*/
 @media only screen and (max-width:1400px){
     .caixa-ultimos-livros{
-        max-width: 1280px;
+        max-width: 1140px;
         margin-left: 16px; 
     }
 }
@@ -599,6 +603,11 @@ footer{
         z-index: 100;
     }
 
+    .carousel-indicators [data-bs-target].custom-indicator:hover{
+        background-color:rgba(255, 255, 255, 0);
+        border-radius: 50%;
+    }
+
     #copyright{
         margin-top: 50px;
         padding: 0;
@@ -644,17 +653,13 @@ footer{
     }
 
     .icones-redes { padding: 0; }
-
     #icones-rodape { padding: 0; }
-
     #redes-sociais{ margin-top: 75px; }
 }
 
 @media only screen and (max-width: 450px){
     .titulo{ font-size: 24px; }
-
     .cabecalho-legendas-mobile{ top: 50%; }
-
     .carousel-item .img-fluid{
         width: 100%;
         height: auto;
@@ -700,3 +705,26 @@ footer{
     .voltar-atras{ text-align: center; }
 }
 
+/* CONTEUDO LIVROS PAGINAS 3 + 4 + 5 + 6 */
+#conteudo-caixa-texto{
+    padding-left: 48px;
+}
+
+#conteudo-texto{
+    padding-left: 48px;
+}
+
+.conteudo-margem{
+    padding: 0px;
+}
+
+.conteudo-voltar-atras{
+    text-align: end;
+    margin-top: 80px;
+}
+
+@media only screen and (max-width: 1399px){
+    .conteudo-voltar-atras{
+        margin-top: 25px;
+    } 
+}
