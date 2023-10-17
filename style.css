@@ -781,6 +781,14 @@ footer{
     #conteudo-texto{
         padding: 0;
     }
+
+    .subtitulo-autor{
+        margin-left: 24px; 
+    }
+
+    .titulo-autor{
+        margin-left: 24px; 
+    }
 }
 
 /* CONTACTOS */
