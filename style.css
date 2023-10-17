@@ -719,6 +719,15 @@ footer{
     margin-top: 80px;
 }
 
+.conteudo-margem{
+    padding: 0;
+}
+
+.capa-livro {
+    width: 300px;
+    height: 465px;
+}
+
 @media only screen and (max-width: 1399px){
     .conteudo-voltar-atras{
         margin-top: 25px;
@@ -727,23 +736,40 @@ footer{
 
 @media only screen and (max-width: 767px){
     .img-texto{
-        justify-content: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
 
     #conteudo-caixa-texto{
         padding-left: 0;
-        max-width: 375px;
-    }
-
-    #conteudo-texto{
-        padding-left: 35px;
-        margin-top: 35px;
-        padding-right: 25px;
+        margin-top: 50px;
     }
 
     .conteudo-voltar-atras{
         text-align: center;
+    }
+}
+
+@media only screen and (max-width:450px){
+    #conteudo-capa{
+        padding: 0px;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    #conteudo-caixa-texto{
+        padding-left: 12px;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #conteudo-texto{
+        padding-left: 15px;
     }
 }
 
