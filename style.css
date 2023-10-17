@@ -1,3 +1,7 @@
+/* FONTS PROJECTO */
+@import url(fonts/ibm/stylesheet.css);
+@import url(fonts/lato/stylesheet.css);
+
 /*CORES PROJECTO*/
 :root{
     --cinza-1d: #1D1D1D;
@@ -11,6 +15,15 @@
 }
 
 /*ESTILOS GLOBAIS*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+html, body {
+    animation: fadeIn 875ms ease-in;
+}
+
 html{
     scroll-behavior: smooth;
     margin: 0;
@@ -18,33 +31,37 @@ html{
 }
 
 body{
-    background-color: var(--branco);
     max-width: 1280px;
     margin: auto;
+    background-color: var(--branco);
 }
 
 /*TITULO + SUBLINHADO TITULO*/
-#topo{
-    position: absolute;
+#container-topo{
     width: 100%;
-    z-index: 1000;
     max-width: 1280px;
+    z-index: 1000;
+    position: absolute;
 }
 
 .titulo{
-    font-family: "IBM_bold";
+    font-family: "IBM_Bold";
     font-size: 35px;
     text-transform: uppercase;
-    color: var(--cinza-4d);
     margin-top: 52px;
     padding: 0 15px;
+    color: var(--cinza-4d);
 }
 
-.linha-titulo{
+.sublinha-titulo{
     width: 90%;
     height: 1px;
-    background-color: var(--cinza-70);
     margin: 10px 0 15px 0;
+    background-color: var(--cinza-70);
+}
+
+#menu-topo{
+    margin-top: -15px;
 }
 
 /*BARRA NAVEGACAO HEADER*/
@@ -63,8 +80,8 @@ body{
 
 .menus{
     font-family: "LATO_black";
-    text-transform: uppercase;
     font-size: 18px;
+    text-transform: uppercase;
     color: var(--cinza-4d);
 }
 
@@ -76,7 +93,11 @@ body{
 
 .menus.active,
 .menus:hover,
-#home-link.active,
+#home-link.active, 
+#autor-link.active, 
+#livros-link.active, 
+#imprensa-link.active,
+#contactos-link.active, 
 .navbar-nav .nav-link.show:hover {
     color: var(--dourado-b4);
 }
@@ -86,15 +107,15 @@ body{
     font-family: "IBM_medium";
     font-size: 13px;
     text-transform: uppercase;
-    color: var(--cinza-4d);
-    margin-bottom: 5px;
     text-decoration: none;
+    margin-bottom: 5px;
     padding: 4px 24px;
+    color: var(--cinza-4d);
 }
 
 .submenus:hover{
-    color: var(--dourado-b1);
     text-decoration: none;
+    color: var(--dourado-b1);
 }
 
 .submenus:active{
@@ -102,9 +123,9 @@ body{
 }
 
 .submenus.active{
+    text-decoration: none;
     color: var(--dourado-b1);
     background-color: var(--branco);
-    text-decoration: none;
 }
 
 #submenu-livros{
@@ -134,31 +155,26 @@ body{
     top: 38%;
     left: 15%;
     width: 37.5%;
-    padding: 0;
     text-align: left;
+    padding: 0;
 }
 
 .banner-novidade{
-    height: 20px;
-    margin-bottom: 15px;
     font-family: "IBM_bold";
     font-size: 13px;
     text-transform: uppercase;
-    color: var(--dourado-b4);
-}
-
-.banner-novidade-vazio{
     height: 20px;
     margin-bottom: 15px;
+    color: var(--dourado-b4);
 }
 
 .banner-titulo{
     font-family: "IBM_light";
     font-size: 40px;
     line-height: 44px;
-    color: var(--cinza-4d);
     text-transform: uppercase;
     margin-bottom: 15px;
+    color: var(--cinza-4d);
 }
 
 .banner-texto{
@@ -172,16 +188,16 @@ body{
     width: 120px;
     height: 30px;
     border: none;
-    background-image: url('../TPC_13/images/desktop/botao-saber-mais/sabermais1.svg');
+    background-image: url('images/desktop/botao-saber-mais/sabermais1.svg');
     background-size: cover;
 }
 
 .botao-sabermais-banner:hover {
-    background-image: url('../TPC_13/images/desktop/botao-saber-mais/sabermais2.svg');
+    background-image: url('images/desktop/botao-saber-mais/sabermais2.svg');
 }
 
 /*BANNER CARROSSEL - INDICADORES*/
-.cabecalho-indicadores{
+.indicadores-desktop{
     width: 25%;
     height: auto;
     justify-content: left;
@@ -196,18 +212,27 @@ body{
     position: relative;
     margin-right: 16px;
     background-color: rgba(255, 255, 255, 0);
-    background-image: url('../TPC_13/images/desktop/banner-header/bolabanner1.svg');
+    background-image: url('images/desktop/banner-header/bolabanner1.svg');
 }
 
 .carousel-indicators [data-bs-target].custom-indicator.active{
-    background-image: url('../TPC_13/images/desktop/banner-header/bolabanner2.svg');
+    background-image: url('images/desktop/banner-header/bolabanner2.svg');
+}
+
+.carousel-indicators [data-bs-target].custom-indicator:hover{
+    background-color: var(--cinza-70);
+    border-radius: 50%;
 }
 
 #caixa-topo{
     position: relative;
     margin-top: -45px;
     background-color: var(--branco);
-    box-shadow: 1px 1px 10px 0 rgb(150, 150, 150);
+    box-shadow:
+    0px -1px 5px rgba(150, 150, 150, 0.1), /* Topo */
+    0px 0px 0px rgba(150, 150, 150, 0.1), /* Esquerda */
+    1px 0px 1px rgba(150, 150, 150, 0.1), /* Direita */
+    0px 5px 10px rgba(150, 150, 150, 0.4); /* Baixo */
 }
 
 /*APRESENTACAO ESCRITOR*/
@@ -216,6 +241,7 @@ body{
     max-width: 350px;
     height: auto;
     max-height: 400px;
+    box-shadow: 4px 4px 8px 0px rgb(210, 210, 210);
 }
 
 #bemvindo-caixa-imagem{
@@ -420,38 +446,34 @@ footer{
 }
 
 .botao-insta{
-    background-image: url('../TPC_13/images/desktop/icones-footer/instagram1.svg');
+    background-image: url('images/desktop/icones-footer/instagram1.svg');
     background-size: cover;
 }
 
 .botao-insta:hover {
-    background-image: url('../TPC_13/images/desktop/icones-footer/instagram2.svg');
+    background-image: url('images/desktop/icones-footer/instagram2.svg');
 }
 
 .botao-fb{
-    background-image: url('../TPC_13/images/desktop/icones-footer/facebook1.svg');
+    background-image: url('images/desktop/icones-footer/facebook1.svg');
     background-size: cover;
 }
 
 .botao-fb:hover {
-    background-image: url('../TPC_13/images/desktop/icones-footer/facebook2.svg');
+    background-image: url('images/desktop/icones-footer/facebook2.svg');
 }
 
 .botao-link{
-    background-image: url('../TPC_13/images/desktop/icones-footer/linkedin1.svg');
+    background-image: url('images/desktop/icones-footer/linkedin1.svg');
     background-size: cover;
 }
 
 .botao-link:hover {
-    background-image: url('../TPC_13/images/desktop/icones-footer/linkedin2.svg');
-}
-
-a{
-    text-decoration: none;
+    background-image: url('images/desktop/icones-footer/linkedin2.svg');
 }
 
 #copyright {
-    margin-top: 60px;
+    margin-top: 88px;
 }
 
 .redes{
@@ -472,18 +494,25 @@ a{
 }
 
 /*MEDIA QUERIES DESKTOP*/
+@media only screen and (max-width:1400px){
+    .caixa-ultimos-livros{
+        max-width: 1140px;
+        margin-left: 16px; 
+    }
+}
+
 @media only screen and (max-width: 1200px) {
-    .cabecalho-indicadores { bottom: 45px; }
+    .indicadores-desktop { bottom: 45px; }
 }
 
 @media only screen and (max-width: 1170px) {
     .banner-titulo { font-size: 32px; line-height: 35px; }
     .banner-texto { font-size: 12px; }
-    .cabecalho-indicadores { bottom: 40px; }
+    .indicadores-desktop { bottom: 40px; }
 }
 
 @media only screen and (max-width: 1000px) {
-    .cabecalho-indicadores { bottom: 25px; }
+    .indicadores-desktop { bottom: 25px; }
 }
 
 @media only screen and (max-width: 965px) {
@@ -519,7 +548,6 @@ a{
 /* MOBILE */
 #menu-topo {
     margin-top: -15px;
-    transition-duration: 500ms;
 }
 
 #carousel-mobile{
@@ -532,7 +560,7 @@ a{
     top: 50%;
     left: 7.5%;
     width: 85%;
-    padding: 0px !important;
+    padding: 0px;
     text-align: left;
 }
 
@@ -541,29 +569,23 @@ a{
     height: auto;
     justify-content: left;
     left: -8%;
-    bottom: 5px;;
+    bottom: 25px;;
     z-index: 101;
 }
 
 /* MEDIA QUERIES MOBILE <= 767px */
 @media only screen and (max-width: 767px){
 
-    .banner-titulo{
-        font-size: 2rem;
-    }
+    .banner-titulo{ font-size: 2rem; }
 
     .banner-texto{
         font-size: 0.9rem;
         line-height: 15px;
     }
 
-    #bemvindo-caixa-imagem{
-        padding: 0px !important;
-    }
+    #bemvindo-caixa-imagem{ padding: 0px; }
 
-    #bemvindo-titulo{
-        margin-top: 40px;
-    }
+    #bemvindo-titulo{ margin-top: 40px; }
 
     #caixa-topo{
         display: flex;
@@ -581,14 +603,17 @@ a{
         z-index: 100;
     }
 
+    .carousel-indicators [data-bs-target].custom-indicator:hover{
+        background-color:rgba(255, 255, 255, 0);
+        border-radius: 50%;
+    }
+
     #copyright{
         margin-top: 50px;
         padding: 0;
     }
 
-    .destaques-livro.meio{
-        margin-top: 70px;
-    }
+    .destaques-livro.meio{ margin-top: 70px; }
 
     #livro-mobile{
         width: 100px;
@@ -620,34 +645,26 @@ a{
         justify-content: center;
     }
 
-    .titulo{
-        margin-top: 52px;
-    }
+    .titulo{ margin-top: 52px; }
 
     #contactos-footer{
         padding: 0;
+        text-align: center;
     }
 
-    .icones-redes {
-        padding: 0;
-    }
-
-    #icones-rodape {
-        padding: 0;
-    }
-
-    #redes-sociais{
-        margin-top: 75px;
-    }
+    .icones-redes { padding: 0; }
+    #icones-rodape { padding: 0; }
+    #redes-sociais{ margin-top: 75px; }
 }
 
 @media only screen and (max-width: 450px){
-    .titulo{
-        font-size: 24px;
-    }
-
-    .cabecalho-legendas-mobile{
-        top: 45%;
+    .titulo{ font-size: 24px; }
+    .cabecalho-legendas-mobile{ top: 50%; }
+    .carousel-item .img-fluid{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        max-height: 730px;
     }
 
 }
@@ -657,3 +674,127 @@ a{
     #caixa-destaques-livros { gap: 60px;}
 }
 
+/* AUTOR PÁGINA 2 */
+.titulo-autor{
+    font-family: "Lato_black";
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 75px;
+    color: var(--dourado-b4);
+}
+
+.subtitulo-autor{
+    font-size: 23px;
+    margin-left: 75px;
+}
+
+.botao-voltar-atras{
+    margin-top: 15px;
+    width: 132px;
+    height: 30px;
+    border: none;
+    background-image: url('images/desktop/botao-voltar/voltar1.svg');
+    background-size: cover;
+}
+
+.botao-voltar-atras:hover {
+    background-image: url('images/desktop/botao-voltar/voltar2.svg');
+} 
+
+@media only screen and (max-width: 767px){
+    .voltar-atras{ text-align: center; }
+}
+
+/* CONTEUDO LIVROS PAGINAS 3 + 4 + 5 + 6 */
+#conteudo-caixa-texto{
+    padding-left: 48px;
+}
+
+#conteudo-texto{
+    padding-left: 48px;
+}
+
+.conteudo-voltar-atras{
+    text-align: end;
+    margin-top: 80px;
+}
+
+.conteudo-margem{
+    padding: 0;
+}
+
+.capa-livro {
+    width: 300px;
+    height: 465px;
+}
+
+@media only screen and (max-width: 1399px){
+    .conteudo-voltar-atras{
+        margin-top: 25px;
+    } 
+}
+
+@media only screen and (max-width: 767px){
+    .img-texto{
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #conteudo-caixa-texto{
+        padding-left: 0;
+        margin-top: 50px;
+    }
+
+    .conteudo-voltar-atras{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:450px){
+    #conteudo-capa{
+        padding: 0px;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    #conteudo-caixa-texto{
+        padding-left: 12px;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #conteudo-texto{
+        padding-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .conteudo-margem{
+        padding: 0;
+    }
+
+    #conteudo-texto{
+        padding: 0;
+    }
+
+    .subtitulo-autor{
+        margin-left: 24px; 
+    }
+
+    .titulo-autor{
+        margin-left: 24px; 
+    }
+}
+
+/* CONTACTOS */
+.linha-contactos {
+    width: 70px;
+    height: 1px;
+    background-color: var(--cinza-70);
+    margin: 45px 0px;
+}
