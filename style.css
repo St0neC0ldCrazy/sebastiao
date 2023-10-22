@@ -21,7 +21,7 @@
 }
 
 html, body {
-    animation: fadeIn 875ms ease-in;
+    animation: fadeIn 1000ms ease-in;
 }
 
 html{
@@ -113,9 +113,10 @@ body{
     color: var(--cinza-4d);
 }
 
-.submenus:hover{
+.submenus:hover, .submenus.active{
     text-decoration: none;
     color: var(--dourado-b1);
+    background-color: transparent;
 }
 
 .submenus:active{
@@ -666,11 +667,9 @@ footer{
         margin: auto;
         max-height: 730px;
     }
-
 }
 
 @media only screen and (max-width: 360px) {
-    #contactos-footer { padding-left: 12px; }
     #caixa-destaques-livros { gap: 60px;}
 }
 
@@ -730,8 +729,21 @@ footer{
 
 @media only screen and (max-width: 1399px){
     .conteudo-voltar-atras{
-        margin-top: 25px;
+        margin-top: 65px;
     } 
+}
+
+@media only screen and (max-width: 1200px){
+    .conteudo-voltar-atras{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .conteudo-voltar-atras{
+        margin-top: 50px;
+        
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -789,6 +801,10 @@ footer{
     .titulo-autor{
         margin-left: 24px; 
     }
+
+    .conteudo-voltar-atras{
+        display: none;
+    }
 }
 
 /* CONTACTOS */
@@ -797,4 +813,97 @@ footer{
     height: 1px;
     background-color: var(--cinza-70);
     margin: 45px 0px;
+}
+
+/* IMPRENSA */
+#ultimas-noticias, .foto-autor{
+    margin-top: 60px;
+    padding: 0px 15px;
+}
+
+.linha-imprensa{
+    margin: 12px 0px 12px;
+    max-width: 891px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dourado-a9);
+}
+
+.data-publicacao{
+    max-width: 891px;
+    font-family: "IBM medium";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+    margin-bottom: 40px;
+}
+
+.linha-noticias{
+    margin: 80px 0px;
+    width: 100%;
+    height: 2px; 
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.texto-resumo{
+    margin-top: 40px;
+    max-width: 900px;
+}
+
+/* NAV BAR PAGINAÇÃO */
+.page-item {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+#nav-paginacao{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.paginacao{
+    display: flex;
+    justify-content: center;
+}
+
+.page-link.numero{
+    font-family: "IBM_medium";
+    margin-right: 17px;
+    font-size: 23px;
+    color: var(--cinza-4d);
+}
+
+.page-link.numero.active, .page-link.numero:hover{
+    color: var(--dourado-b1);
+}
+
+.esquerda-seta, .direita-seta {
+    width: 17px;
+    height: 30px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.esquerda-seta{
+    margin-right: 60px;
+    background-image: url('images/desktop/botoes-navegacao/setaesquerda1.svg');
+}
+
+.esquerda-seta:hover {
+    background-image: url('images/desktop/botoes-navegacao/setaesquerda2.svg');
+}
+
+.direita-seta {
+    margin-left: 43px;
+    background-image: url('images/desktop/botoes-navegacao/setadireita1.svg');
+}
+
+.direita-seta:hover {
+    background-image: url('images/desktop/botoes-navegacao/setadireita2.svg');
 }
