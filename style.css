@@ -766,6 +766,15 @@ footer{
     .conteudo-voltar-atras{
         text-align: center;
     }
+
+    .texto-imprensa{
+        font-family: "IBM_light";
+        font-size: 14px;
+    }
+
+    .paginacao{
+        padding-left: 0;
+    }
 }
 
 @media only screen and (max-width:450px){
@@ -813,14 +822,6 @@ footer{
     .p{
         padding-right: 0;
     }
-
-    .data-publicacao{
-        padding-right: 12px;
-    }
-
-    .paginacao{
-        padding-left: 0;
-    }
 }
 
 /* CONTACTOS */
@@ -846,9 +847,9 @@ footer{
 .data-publicacao{
     font-family: "IBM_medium";
     text-transform: uppercase;
-    max-width: 891px;
     font-size: 13px;
     margin-bottom: 40px;
+    padding-right: 12px;
     color: var(--cinza-4d);
 }
 
@@ -862,6 +863,11 @@ footer{
 .texto-resumo{
     margin-top: 40px;
     max-width: 900px;
+}
+
+.texto-imprensa{
+    font-family: "IBM_light";
+    font-size: 16px;
 }
 
 /* NAV BAR PAGINAÇÃO */
