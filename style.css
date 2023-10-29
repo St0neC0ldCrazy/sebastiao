@@ -326,7 +326,7 @@ body{
 
 .destaques-titulo{
     font-family: "IBM_medium";
-    font-size: 25px;
+    font-size: 23.9px;
     text-transform: uppercase;
     line-height: 25px;
     color: var(--cinza-4d);
@@ -646,6 +646,10 @@ footer{
         justify-content: center;
     }
 
+    .caixa-ultimos-livros{
+        margin-left: 0;
+    }
+
     .titulo{ margin-top: 52px; }
 
     #contactos-footer{
@@ -805,6 +809,10 @@ footer{
     .conteudo-voltar-atras{
         display: none;
     }
+
+    .p{
+        padding-right: 0;
+    }
 }
 
 /* CONTACTOS */
@@ -823,19 +831,17 @@ footer{
 
 .linha-imprensa{
     margin: 12px 0px 12px;
-    max-width: 891px;
-    width: 100%;
     height: 1px;
     background-color: var(--dourado-a9);
 }
 
 .data-publicacao{
-    max-width: 891px;
-    font-family: "IBM medium";
-    font-size: 13px;
+    font-family: "IBM_medium";
     text-transform: uppercase;
-    color: var(--cinza-4d);
+    max-width: 891px;
+    font-size: 13px;
     margin-bottom: 40px;
+    color: var(--cinza-4d);
 }
 
 .linha-noticias{
